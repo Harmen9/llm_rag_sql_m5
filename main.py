@@ -16,9 +16,9 @@ tweet_prompt = PromptTemplate.from_template("""
     Do not make up answers, stick to the facts {question}.
     """)
 
-tweet_chain = LLMChain(llm=llm, prompt=tweet_prompt, verbose=True)
+customer_chain = LLMChain(llm=llm, prompt=tweet_prompt, verbose=True)
 
 if __name__=="__main__":
-    question = ""
-    resp = tweet_chain.run(topic=question)
+    question = "What is 1+1?"
+    resp = customer_chain.run(question=question)
     print(resp)
