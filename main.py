@@ -20,5 +20,5 @@ tweet_chain = LLMChain(llm=llm, prompt=tweet_prompt, verbose=True)
 
 if __name__=="__main__":
     question = ""
-    resp = tweet_chain.run(topic=topic)
+    resp = tweet_chain.run(topic=question)
     print(resp)
