@@ -44,4 +44,4 @@ llm = OpenAI(
 
 db_chain = SQLDatabaseChain.from_llm(llm, db, verbose=True)
 
-db_chain.run("How many locations are there with more than 20 distinct products?")
+db_chain.run("How many locations are there?")
